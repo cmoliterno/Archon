@@ -1,4 +1,4 @@
-# CLAUDE.md
+﻿# CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
@@ -277,3 +277,24 @@ When connected to Cursor/Windsurf:
 - Frontend uses Vite proxy for API calls in development
 - Python backend uses `uv` for dependency management
 - Docker Compose handles service orchestration
+<!-- ORION_RAG_PROTOCOL:start -->
+## Orion RAG / Contexto Operacional
+
+Antes de pedir contexto para Carol, colar documentos longos ou delegar trabalho, consulte o Orion RAG quando a tarefa envolver projeto, cliente, proposta, reunião, bug, arquitetura, repo ou decisão operacional.
+
+Fonte de regra: `C:/Workspaces/zethera-vault/docs/ai/ORION_RAG_OPERATING_PROTOCOL.md`
+
+Comando local/Codex:
+
+```powershell
+python C:\Workspaces\zethera-vault\scripts\orion_intelligence\orion_openclaw_bridge.py --query "<cliente projeto problema>" --limit 10
+```
+
+Comando VPS/OpenClaw:
+
+```bash
+python3 /data/.openclaw/tools/orion_rag_context.py --query "<cliente projeto problema>" --limit 10
+```
+
+Use o Evidence Pack para citar fontes, separar fato/inferência/recomendação e registrar lacunas. Para demandas comerciais/operacionais, o fluxo correto é Notion-first: Jarvis cria/atualiza a página, anexa contexto, classifica farol e só depois delega para Codex/Claude/Carol.
+<!-- ORION_RAG_PROTOCOL:end -->
